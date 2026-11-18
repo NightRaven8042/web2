@@ -4,604 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael Adkins personal portfolio.">
 
-    <title>Michael Adkins | Portfolio</title>
+    <title>Home | Michael Adkins</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS STYLING -->
-    <style>
-
-        /* COLOR PALETTE */
-        :root {
-            --navy: #202B3C;
-            --light-gray: #EDF1F5;
-            --off-white: #F7F5F0;
-            --teal: #4D7C8A;
-            --white: #FFFFFF;
-        }
-
-        /* GLOBAL RESET */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* GENERAL STYLING */
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: var(--off-white);
-            color: var(--navy);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            line-height: 1.3;
-        }
-
-        h2 {
-            font-size: 32px;
-            margin-bottom: 24px;
-        }
-
-        h3 {
-            font-size: 22px;
-            margin-bottom: 16px;
-        }
-
-        p {
-            margin-bottom: 16px;
-        }
-
-        a {
-            color: var(--teal);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        a:hover {
-            color: var(--navy);
-            text-decoration: underline;
-        }
-
-        ul {
-            padding-left: 24px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* HEADER */
-        #home {
-            background-color: var(--navy);
-            color: var(--white);
-            text-align: center;
-            padding: 48px 24px 32px;
-        }
-
-        .header-content h1 {
-            font-size: 44px;
-            margin-bottom: 8px;
-        }
-
-        .header-content p {
-            color: var(--light-gray);
-        }
-
-        /* NAVIGATION */
-        nav {
-            background-color: var(--teal);
-            padding: 16px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        nav li {
-            margin: 0;
-        }
-
-        nav a {
-            color: var(--white);
-        }
-
-        nav a:hover {
-            color: var(--off-white);
-        }
-
-        /* MAIN CONTENT */
-        main {
-            max-width: 1200px;
-            width: calc(100% - 48px);
-            margin: 32px auto;
-        }
-
-        .content-section {
-            padding: 32px 0;
-            scroll-margin-top: 24px;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid #D4DCE3;
-            margin: 16px 0;
-        }
-
-        /* INTRODUCTION */
-        .intro-card {
-            background-color: var(--light-gray);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 32px;
-            border-left: 6px solid var(--teal);
-        }
-
-        .featured-work {
-            padding: 24px;
-        }
-
-        /* BUTTON */
-        .button {
-            display: inline-block;
-            background-color: var(--teal);
-            color: var(--white);
-            padding: 12px 24px;
-            border-radius: 6px;
-            margin-top: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: var(--navy);
-            color: var(--white);
-            text-decoration: none;
-        }
-
-        /* GRID LAYOUT */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
-            margin: 24px 0;
-        }
-
-        /* CARDS */
-        .card {
-            background-color: var(--white);
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid #DCE3E9;
-            box-shadow: 0 4px 12px rgba(32, 43, 60, 0.06);
-        }
-
-        .card h3:not(:first-child) {
-            margin-top: 24px;
-        }
-
-        /* ABOUT SECTION */
-        #about {
-            background-color: var(--light-gray);
-            padding: 32px 24px;
-            border-radius: 12px;
-        }
-
-        /* SITE PLAN */
-        #site-plan {
-            padding-bottom: 48px;
-        }
-
-        #site-plan .card {
-            margin-bottom: 8px;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: var(--navy);
-            color: var(--white);
-            text-align: center;
-            padding: 32px 16px;
-        }
-
-        footer p {
-            margin-bottom: 8px;
-        }
-
-        footer a {
-            color: var(--light-gray);
-        }
-
-        footer a:hover {
-            color: var(--white);
-        }
-
-        /* TABLET: 768px AND LARGER */
-        @media screen and (min-width: 768px) {
-
-            .card-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .header-content h1 {
-                font-size: 48px;
-            }
-
-            main {
-                width: calc(100% - 64px);
-            }
-
-            .content-section {
-                padding: 40px 0;
-            }
-        }
-
-        /* DESKTOP: 1024px AND LARGER */
-        @media screen and (min-width: 1024px) {
-
-            .card-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 32px;
-            }
-
-            .header-content h1 {
-                font-size: 56px;
-            }
-
-            nav ul {
-                gap: 48px;
-            }
-
-            main {
-                width: calc(100% - 80px);
-            }
-
-            .intro-card {
-                padding: 48px;
-            }
-        }
-
-        /* MOBILE: 320px TO 767px */
-        @media screen and (max-width: 767px) {
-
-            body {
-                font-size: 15px;
-            }
-
-            #home {
-                padding: 32px 16px 24px;
-            }
-
-            .header-content h1 {
-                font-size: 34px;
-            }
-
-            nav {
-                padding: 16px 8px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            nav a {
-                display: block;
-                padding: 4px 16px;
-            }
-
-            main {
-                width: calc(100% - 32px);
-                margin: 16px auto;
-            }
-
-            .content-section {
-                padding: 24px 0;
-            }
-
-            h2 {
-                font-size: 27px;
-            }
-
-            h3 {
-                font-size: 20px;
-            }
-
-            .intro-card {
-                padding: 24px 16px;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .card {
-                padding: 20px;
-            }
-
-            #about {
-                padding: 24px 16px;
-            }
-
-            footer {
-                padding: 24px 16px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER AND NAVIGATION -->
-    <header id="home">
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
 
-        <div class="header-content">
-            <h1>Michael Adkins</h1>
-            <p>Welcome to my personal portfolio website.</p>
-        </div>
+<header class="site-header">
 
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects / Work</a></li>
-                <li><a href="#about">About / Contact</a></li>
-                <li><a href="#site-plan">Site Plan</a></li>
-            </ul>
-        </nav>
+    <div class="header-content">
+        <h1>Michael Adkins</h1>
+        <p>Welcome to my personal portfolio website.</p>
+    </div>
 
-    </header>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="projects.html">Projects / Work</a></li>
+            <li><a href="contact.html">About / Contact</a></li>
+        </ul>
+    </nav>
 
-    <main>
+</header>
 
-        <!-- HOME SECTION -->
-        <section id="home-section" class="content-section">
+<main id="main-content">
 
-            <h2>Home</h2>
+    <section class="content-section" aria-labelledby="home-heading">
 
-            <div class="intro-card">
-                <h3>Hello, I'm Michael Adkins</h3>
+        <h2 id="home-heading">Home</h2>
 
-                <p>
-                    Welcome to my portfolio. This website introduces me
-                    and showcases my projects, skills, and interests.
-                </p>
+        <div class="intro-card">
 
-                <a class="button" href="#projects">
-                    Explore My Projects
-                </a>
-            </div>
-
-            <div class="featured-work">
-                <h3>Featured Work</h3>
-
-                <p>
-                    This section will highlight some of my favorite
-                    projects and accomplishments.
-                </p>
-            </div>
-
-        </section>
-
-        <hr>
-
-        <!-- PROJECTS / WORK SECTION -->
-        <section id="projects" class="content-section">
-
-            <h2>Projects / Work</h2>
+            <h3>Hello, I'm Michael Adkins</h3>
 
             <p>
-                This page section will showcase my projects,
-                skills, and accomplishments.
+                Welcome to my portfolio. This website introduces me
+                and showcases my projects, skills, and interests.
             </p>
 
-            <div class="card-grid">
+            <a class="button" href="projects.html">
+                Explore My Projects
+            </a>
 
-                <article class="card">
+        </div>
 
-                    <h3>Project One</h3>
+        <section class="featured-work" aria-labelledby="featured-heading">
 
-                    <p>
-                        This is a placeholder for my first project.
-                        I will add a description of the project here.
-                    </p>
+            <h3 id="featured-heading">Featured Work</h3>
 
-                    <h3>Tools and Skills</h3>
+            <p>
+                This section highlights selected projects and accomplishments.
+            </p>
 
-                    <p>
-                        I will list the tools and skills used
-                        for this project here.
-                    </p>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>Project Two</h3>
-
-                    <p>
-                        This is a placeholder for my second project.
-                        I will describe the project and its purpose here.
-                    </p>
-
-                    <h3>Results and Learning</h3>
-
-                    <p>
-                        I will explain what I learned and the results
-                        of this project.
-                    </p>
-
-                </article>
-
-            </div>
-
-            <p><a href="#home">Back to Home</a></p>
+            <p>
+                <a href="projects.html">View projects and work</a>
+            </p>
 
         </section>
 
-        <hr>
+    </section>
 
-        <!-- ABOUT / CONTACT SECTION -->
-        <section id="about" class="content-section">
+    <hr>
 
-            <h2>About / Contact</h2>
+    <section class="content-section site-plan" aria-labelledby="site-plan-heading">
 
-            <div class="card-grid">
+        <h2 id="site-plan-heading">Site Plan and Design Notes</h2>
 
-                <article class="card">
+        <div class="card-grid">
 
-                    <h3>About Me</h3>
-
-                    <p>
-                        My name is Michael Adkins. This section will tell
-                        visitors about my background, interests, goals,
-                        and experience.
-                    </p>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>Skills and Interests</h3>
-
-                    <p>
-                        I will add information about my skills, interests,
-                        and areas I would like to learn more about.
-                    </p>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>Contact Me</h3>
-
-                    <p>
-                        Thank you for visiting my portfolio.
-                        You can contact me using the information below.
-                    </p>
-
-                    <p>Email: Add your email address here.</p>
-
-                    <p>
-                        Professional Profile: Add a link here if applicable.
-                    </p>
-
-                </article>
-
-            </div>
-
-            <p><a href="#home">Back to Home</a></p>
-
-        </section>
-
-        <hr>
-
-        <!-- SITE PLAN SECTION -->
-        <section id="site-plan" class="content-section">
-
-            <h2>Site Plan and Wireframe Notes</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
-
-                    <h3>Home Layout</h3>
-
-                    <ul>
-                        <li>Header with my name and welcome message</li>
-                        <li>Navigation menu</li>
-                        <li>Introduction section</li>
-                        <li>Featured work section</li>
-                        <li>Footer with copyright and contact link</li>
-                    </ul>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>Projects / Work Layout</h3>
-
-                    <ul>
-                        <li>Page heading and navigation</li>
-                        <li>Introduction to my work</li>
-                        <li>Project One section</li>
-                        <li>Project Two section</li>
-                        <li>Footer with copyright and contact link</li>
-                    </ul>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>About / Contact Layout</h3>
-
-                    <ul>
-                        <li>Page heading and navigation</li>
-                        <li>About Me section</li>
-                        <li>Skills and Interests section</li>
-                        <li>Contact information section</li>
-                        <li>Footer with copyright and home link</li>
-                    </ul>
-
-                </article>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Intended Color Palette</h3>
+            <article class="card">
+                <h3>Home Layout</h3>
 
                 <ul>
-                    <li>Deep Navy: #202B3C</li>
-                    <li>Cool Light Gray: #EDF1F5</li>
-                    <li>Warm Off-White: #F7F5F0</li>
-                    <li>Muted Teal: #4D7C8A</li>
+                    <li>Header and navigation</li>
+                    <li>Introduction and featured work</li>
+                    <li>Links to projects and contact information</li>
                 </ul>
+            </article>
 
-                <h3>Font Choices</h3>
+            <article class="card">
+                <h3>Projects Layout</h3>
 
                 <ul>
-                    <li>Headings: Playfair Display</li>
-                    <li>Body Text: DM Sans</li>
+                    <li>Page heading and introduction</li>
+                    <li>Project cards with descriptions</li>
+                    <li>Tools, skills, results, and learning</li>
                 </ul>
+            </article>
 
-                <h3>Design Goal</h3>
+            <article class="card">
+                <h3>About / Contact Layout</h3>
 
-                <p>
-                    My goal is to create a clean, simple, easy-to-navigate
-                    portfolio with consistent sections and readable text.
-                    CSS styling has been added to create a professional
-                    and responsive website.
-                </p>
+                <ul>
+                    <li>About me and skills</li>
+                    <li>Contact information</li>
+                    <li>Accessible contact form</li>
+                </ul>
+            </article>
 
-            </div>
+        </div>
 
-        </section>
+        <h3>Consistent Color Palette</h3>
 
-    </main>
+        <ul class="palette-list">
+            <li>Deep Navy: #202B3C</li>
+            <li>Cool Light Gray: #EDF1F5</li>
+            <li>Warm Off-White: #F7F5F0</li>
+            <li>Accessible Teal: #315B66</li>
+        </ul>
 
-    <!-- FOOTER -->
-    <footer>
+        <h3>Typography</h3>
 
-        <p>&copy; 2026 Michael Adkins</p>
+        <p>
+            Playfair Display is used for headings and DM Sans
+            is used for body text.
+        </p>
 
-        <p><a href="#about">Contact Me</a></p>
+    </section>
 
-        <p><a href="#home">Return to Top</a></p>
+</main>
 
-    </footer>
+<footer>
+
+    <p>&copy; 2026 Michael Adkins</p>
+
+    <p>
+        <a href="contact.html">Contact Me</a>
+    </p>
+
+    <p>
+        <a href="#main-content">Return to Top</a>
+    </p>
+
+</footer>
 
 </body>
 </html>
