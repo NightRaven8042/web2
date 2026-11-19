@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Michael Adkins and contact information.">
+
+    <title>About / Contact | Michael Adkins</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header class="site-header">
+
+    <div class="header-content">
+        <h1>Michael Adkins</h1>
+        <p>Welcome to my personal portfolio website.</p>
+    </div>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects / Work</a></li>
+            <li><a href="contact.html" aria-current="page">About / Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main id="main-content">
+
+    <section class="content-section" aria-labelledby="about-heading">
+
+        <h2 id="about-heading">About / Contact</h2>
+
+        <div class="card-grid">
+
+            <article class="card">
+
+                <h3>About Me</h3>
+
+                <p>
+                    My name is Michael Adkins. Use this section to tell
+                    visitors about your background, interests, goals,
+                    and experience.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Skills and Interests</h3>
+
+                <p>
+                    Add information about your skills, interests,
+                    and areas you would like to learn more about.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="content-section" aria-labelledby="contact-heading">
+
+        <h2 id="contact-heading">Contact Me</h2>
+
+        <p class="page-intro">
+            Use the form below to send a message.
+            Fields marked required must be completed.
+        </p>
+
+        <form class="contact-form" id="contact-form"
+              action="#" method="post" novalidate>
+
+            <fieldset>
+
+                <legend>Your Contact Details</legend>
+
+                <div class="form-field">
+
+                    <label for="name">Name (required)</label>
+
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        required
+                        aria-describedby="name-hint name-error"
+                    >
+
+                    <p class="hint" id="name-hint">
+                        Enter your first and last name.
+                    </p>
+
+                    <p class="error-message" id="name-error" hidden></p>
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="email">Email Address (required)</label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required
+                        aria-describedby="email-hint email-error"
+                    >
+
+                    <p class="hint" id="email-hint">
+                        Use an email address where I can reply to you.
+                    </p>
+
+                    <p class="error-message" id="email-error" hidden></p>
+
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Your Message</legend>
+
+                <div class="form-field">
+
+                    <label for="topic">Message Topic</label>
+
+                    <select id="topic" name="topic">
+
+                        <option value="">
+                            Choose a topic (optional)
+                        </option>
+
+                        <option value="project">
+                            Project Question
+                        </option>
+
+                        <option value="collaboration">
+                            Collaboration
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="message">Message (required)</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        aria-describedby="message-hint message-error"
+                    ></textarea>
+
+                    <p class="hint" id="message-hint">
+                        Please include enough detail for me to understand
+                        your question.
+                    </p>
+
+                    <p class="error-message" id="message-error" hidden></p>
+
+                </div>
+
+            </fieldset>
+
+            <div
+                id="form-status"
+                class="form-status"
+                role="status"
+                aria-live="polite"
+                hidden
+            ></div>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+        <p class="hint">
+            Note: This is a demonstration form. Connect it to a form
+            service or server before using it to receive real messages.
+        </p>
+
+    </section>
+
+    <p>
+        <a href="index.html">Back to Home</a>
+    </p>
+
+</main>
+
+<footer>
+
+    <p>&copy; 2026 Michael Adkins</p>
+
+    <p>
+        <a href="contact.html">Contact Me</a>
+    </p>
+
+    <p>
+        <a href="#main-content">Return to Top</a>
+    </p>
+
+</footer>
+
+</body>
+</html>
