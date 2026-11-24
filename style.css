@@ -142,6 +142,22 @@ nav a:hover {
     text-decoration-thickness: 2px;
 }
 
+/* MOBILE MENU TOGGLE */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin: 10px auto;
+    padding: 10px 16px;
+    background-color: var(--teal);
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 6px;
+}
+
+#menu-toggle:hover {
+    background-color: var(--navy);
+}
+
 /* MAIN CONTENT */
 main {
     width: min(1120px, calc(100% - 32px));
@@ -186,6 +202,7 @@ button {
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .button:hover,
@@ -293,13 +310,21 @@ textarea {
 
 /* FORM ERRORS */
 .error-message {
+    display: block;
     color: var(--error);
     font-weight: 700;
+    font-size: 0.92rem;
     margin: 4px 0 0;
+}
+
+.error-message[hidden],
+.form-status[hidden] {
+    display: none;
 }
 
 [aria-invalid="true"] {
     border: 2px solid var(--error);
+    background-color: var(--error-bg);
 }
 
 .form-status {
@@ -320,6 +345,34 @@ textarea {
     color: var(--success);
     background-color: #E8F3EB;
     border-color: var(--success);
+}
+
+/* GITHUB PROFILE API CARD */
+#github-profile {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(32, 43, 60, 0.06);
+}
+
+#github-profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--teal);
+    margin-bottom: 12px;
+}
+
+#github-profile h3 {
+    color: var(--navy);
+}
+
+#github-profile p {
+    color: var(--navy);
 }
 
 /* FOOTER */
@@ -374,6 +427,19 @@ footer a {
 
     .header-content {
         padding: 32px 16px 24px;
+    }
+
+    /* MOBILE NAVIGATION */
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.active {
+        display: block;
     }
 
     nav ul {

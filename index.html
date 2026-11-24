@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,25 +23,56 @@
     Skip to main content
 </a>
 
+<!-- HEADER -->
 <header class="site-header">
 
     <div class="header-content">
+
         <h1>Michael Adkins</h1>
+
         <p>Welcome to my personal portfolio website.</p>
+
     </div>
 
+    <!-- NAVIGATION -->
+    <button
+        id="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Toggle navigation">
+
+        ☰ Menu
+
+    </button>
+
     <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="projects.html">Projects / Work</a></li>
-            <li><a href="contact.html">About / Contact</a></li>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="index.html" aria-current="page">Home</a>
+            </li>
+
+            <li>
+                <a href="projects.html">Projects / Work</a>
+            </li>
+
+            <li>
+                <a href="contact.html">About / Contact</a>
+            </li>
+
         </ul>
+
     </nav>
 
 </header>
 
+
+<!-- MAIN CONTENT -->
 <main id="main-content">
 
+    <!-- HOME SECTION -->
     <section class="content-section" aria-labelledby="home-heading">
 
         <h2 id="home-heading">Home</h2>
@@ -60,6 +92,8 @@
 
         </div>
 
+
+        <!-- FEATURED WORK -->
         <section class="featured-work" aria-labelledby="featured-heading">
 
             <h3 id="featured-heading">Featured Work</h3>
@@ -78,6 +112,8 @@
 
     <hr>
 
+
+    <!-- SITE PLAN -->
     <section class="content-section site-plan" aria-labelledby="site-plan-heading">
 
         <h2 id="site-plan-heading">Site Plan and Design Notes</h2>
@@ -85,6 +121,7 @@
         <div class="card-grid">
 
             <article class="card">
+
                 <h3>Home Layout</h3>
 
                 <ul>
@@ -92,9 +129,12 @@
                     <li>Introduction and featured work</li>
                     <li>Links to projects and contact information</li>
                 </ul>
+
             </article>
 
+
             <article class="card">
+
                 <h3>Projects Layout</h3>
 
                 <ul>
@@ -102,9 +142,12 @@
                     <li>Project cards with descriptions</li>
                     <li>Tools, skills, results, and learning</li>
                 </ul>
+
             </article>
 
+
             <article class="card">
+
                 <h3>About / Contact Layout</h3>
 
                 <ul>
@@ -112,19 +155,26 @@
                     <li>Contact information</li>
                     <li>Accessible contact form</li>
                 </ul>
+
             </article>
 
         </div>
 
+
+        <!-- COLOR PALETTE -->
         <h3>Consistent Color Palette</h3>
 
         <ul class="palette-list">
+
             <li>Deep Navy: #202B3C</li>
             <li>Cool Light Gray: #EDF1F5</li>
             <li>Warm Off-White: #F7F5F0</li>
             <li>Accessible Teal: #315B66</li>
+
         </ul>
 
+
+        <!-- TYPOGRAPHY -->
         <h3>Typography</h3>
 
         <p>
@@ -134,8 +184,140 @@
 
     </section>
 
+
+    <hr>
+
+
+    <!-- BONUS GITHUB API SECTION -->
+    <section class="content-section" aria-labelledby="github-heading">
+
+        <h2 id="github-heading">GitHub Profile</h2>
+
+        <p>
+            Check out this GitHub profile using live information
+            retrieved from the GitHub public API.
+        </p>
+
+        <div id="github-profile" aria-live="polite">
+
+            Loading GitHub profile...
+
+        </div>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="content-section" aria-labelledby="contact-heading">
+
+        <h2 id="contact-heading">Contact Me</h2>
+
+        <p>
+            Have a question or want to get in touch?
+            Complete the form below.
+        </p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+
+            <fieldset>
+
+                <legend>Contact Information</legend>
+
+
+                <!-- NAME -->
+                <div class="form-field">
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                        aria-describedby="name-error">
+
+                    <span
+                        id="name-error"
+                        class="error-message"
+                        hidden>
+                    </span>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-field">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        aria-describedby="email-error">
+
+                    <span
+                        id="email-error"
+                        class="error-message"
+                        hidden>
+                    </span>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="form-field">
+
+                    <label for="message">Your Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required
+                        aria-describedby="message-error">
+                    </textarea>
+
+                    <span
+                        id="message-error"
+                        class="error-message"
+                        hidden>
+                    </span>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button type="submit">
+                    Send Message
+                </button>
+
+
+                <!-- FORM STATUS -->
+                <p
+                    id="form-status"
+                    class="form-status"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+                </p>
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
 </main>
 
+
+<!-- FOOTER -->
 <footer>
 
     <p>&copy; 2026 Michael Adkins</p>
@@ -149,6 +331,10 @@
     </p>
 
 </footer>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js" defer></script>
 
 </body>
 </html>
